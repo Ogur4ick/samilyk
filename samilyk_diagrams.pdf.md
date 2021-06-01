@@ -1,1 +1,1 @@
-![Imgur](https://imgur.com/a/JokCh3a)
+![Imgur](https://imgur.com/3t1WikS)
