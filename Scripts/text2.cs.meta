@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 37d902e447ba3ad4b82b4a2c3b043013
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - Button: {instanceID: 0}
+  - TextBox3: {instanceID: 0}
+  - TextBox4: {instanceID: 0}
+  - TextBox5: {instanceID: 0}
+  - pic1: {fileID: 21300000, guid: 7916962273b678b4691e81b3e3f336bf, type: 3}
+  - pic2: {fileID: 21300000, guid: 5f1610759a1cbd840a9ad5e4b242f6aa, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
