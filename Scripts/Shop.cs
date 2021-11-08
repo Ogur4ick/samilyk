@@ -22,10 +22,27 @@ public class Shop : MonoBehaviour
     public GameObject BuyButtonExtra4;
     public GameObject HouseButton4;
 
+    public GameObject BuyButton5;
+    public GameObject BuyButtonExtra5;
+    public GameObject HouseButton5;
+
+    public GameObject BuyButton6;
+    public GameObject BuyButtonExtra6;
+    public GameObject HouseButton6;
+
+    public GameObject BuyButton7;
+    public GameObject BuyButtonExtra7;
+    public GameObject HouseButton7;
+
     public static int BuyHouse1 = 1;
     public static int BuyHouse2 = 1;
     public static int BuyHouse3 = 1;
     public static int BuyHouse4 = 1;
+    public static int BuyHouse5 = 1;
+    public static int BuyHouse6 = 1;
+    public static int BuyHouse7 = 1;
+
+    public static int Houses = 0;
 
     public static int lvl;
     public static int curEXP;
@@ -87,6 +104,39 @@ public class Shop : MonoBehaviour
             HouseButton4.SetActive(true);
             BuyButtonExtra4.SetActive(false);
         }
+        if (BuyHouse5 == 1)
+        {
+            BuyButton5.SetActive(true);
+            BuyButtonExtra5.SetActive(true);
+        }
+        else
+        {
+            BuyButton5.SetActive(false);
+            HouseButton5.SetActive(true);
+            BuyButtonExtra5.SetActive(false);
+        }
+        if (BuyHouse6 == 1)
+        {
+            BuyButton6.SetActive(true);
+            BuyButtonExtra6.SetActive(true);
+        }
+        else
+        {
+            BuyButton6.SetActive(false);
+            HouseButton6.SetActive(true);
+            BuyButtonExtra6.SetActive(false);
+        }
+        if (BuyHouse7 == 1)
+        {
+            BuyButton7.SetActive(true);
+            BuyButtonExtra7.SetActive(true);
+        }
+        else
+        {
+            BuyButton7.SetActive(false);
+            HouseButton7.SetActive(true);
+            BuyButtonExtra7.SetActive(false);
+        }
     }
     public void BuyHouses()
     {
@@ -101,6 +151,7 @@ public class Shop : MonoBehaviour
             PlayerPrefs.GetInt("BuyHouse1", BuyHouse1);
             HouseButton1.SetActive(true);
             playerstat.curEXP += 5;
+            Houses += 1;
 
         }
     }
@@ -117,6 +168,7 @@ public class Shop : MonoBehaviour
             PlayerPrefs.GetInt("BuyHouse2", BuyHouse2);
             HouseButton2.SetActive(true);
             playerstat.curEXP += 7;
+            Houses += 1;
         }       
     }
     public void BuyHouses3()
@@ -132,6 +184,7 @@ public class Shop : MonoBehaviour
             PlayerPrefs.GetInt("BuyHouse3", BuyHouse3);
             HouseButton3.SetActive(true);
             playerstat.curEXP += 10;
+            Houses += 1;
         }
     }
 
@@ -142,12 +195,62 @@ public class Shop : MonoBehaviour
 
             DestroyImmediate(BuyButton4);
             DestroyImmediate(BuyButtonExtra4);
-            text2.Coins -= 70;
+            text2.Coins -= 200;
             PlayerPrefs.SetInt("Coins", text2.Coins);
             BuyHouse4 = 2;
             PlayerPrefs.GetInt("BuyHouse4", BuyHouse4);
             HouseButton4.SetActive(true);
             playerstat.curEXP += 10;
+            Houses += 1;
+        }
+    }
+    public void BuyHouses5()
+    {
+        if (text2.Coins >= 400 && playerstat.lvl >= 6)
+        {
+
+            DestroyImmediate(BuyButton5);
+            DestroyImmediate(BuyButtonExtra5);
+            text2.Coins -= 400;
+            PlayerPrefs.SetInt("Coins", text2.Coins);
+            BuyHouse5 = 2;
+            PlayerPrefs.GetInt("BuyHouse5", BuyHouse5);
+            HouseButton5.SetActive(true);
+            playerstat.curEXP += 10;
+            Houses += 1;
+        }
+    }
+
+    public void BuyHouses6()
+    {
+        if (text2.Coins >= 600 && playerstat.lvl >= 7)
+        {
+
+            DestroyImmediate(BuyButton6);
+            DestroyImmediate(BuyButtonExtra6);
+            text2.Coins -= 600;
+            PlayerPrefs.SetInt("Coins", text2.Coins);
+            BuyHouse6 = 2;
+            PlayerPrefs.GetInt("BuyHouse6", BuyHouse6);
+            HouseButton6.SetActive(true);
+            playerstat.curEXP += 10;
+            Houses += 1;
+        }
+    }
+    public void BuyHouses7()
+    {
+        if (text2.Coins >= 1000 && playerstat.lvl >= 8)
+        {
+
+            DestroyImmediate(BuyButton7);
+            DestroyImmediate(BuyButtonExtra7);
+            text2.Coins -= 1000;
+            PlayerPrefs.SetInt("Coins", text2.Coins);
+            BuyHouse7 = 2;
+            PlayerPrefs.GetInt("BuyHouse7", BuyHouse7);
+            HouseButton7.SetActive(true);
+            playerstat.curEXP += 10;
+            Houses += 1;
         }
     }
 
@@ -163,6 +266,7 @@ public class Shop : MonoBehaviour
             PlayerPrefs.GetInt("BuyHouse1", BuyHouse1);
             HouseButton1.SetActive(true);
             playerstat.curEXP += 5;
+            Houses += 1;
         }
     }
     public void BuyHouseEmerald2()
@@ -177,6 +281,7 @@ public class Shop : MonoBehaviour
             PlayerPrefs.GetInt("BuyHouse2", BuyHouse2);
             HouseButton2.SetActive(true);
             playerstat.curEXP += 7;
+            Houses += 1;
 
         }
     }
@@ -192,6 +297,7 @@ public class Shop : MonoBehaviour
             PlayerPrefs.GetInt("BuyHouse3", BuyHouse3);
             HouseButton3.SetActive(true);
             playerstat.curEXP += 10;
+            Houses += 1;
 
         }
     }
@@ -201,12 +307,61 @@ public class Shop : MonoBehaviour
         {
             DestroyImmediate(BuyButton4);
             DestroyImmediate(BuyButtonExtra4);
-            text2.Crystal -= 10;
+            text2.Crystal -= 40;
             PlayerPrefs.SetInt("Crystal", text2.Crystal);
             BuyHouse4 = 2;
             PlayerPrefs.GetInt("BuyHouse4", BuyHouse4);
             HouseButton4.SetActive(true);
             playerstat.curEXP += 10;
+            Houses += 1;
+
+        }
+    }
+    public void BuyHouseEmerald5()
+    {
+        if (text2.Crystal >= 40)
+        {
+            DestroyImmediate(BuyButton5);
+            DestroyImmediate(BuyButtonExtra5);
+            text2.Crystal -= 40;
+            PlayerPrefs.SetInt("Crystal", text2.Crystal);
+            BuyHouse5 = 2;
+            PlayerPrefs.GetInt("BuyHouse5", BuyHouse5);
+            HouseButton5.SetActive(true);
+            playerstat.curEXP += 10;
+            Houses += 1;
+
+        }
+    }
+    public void BuyHouseEmerald6()
+    {
+        if (text2.Crystal >= 60)
+        {
+            DestroyImmediate(BuyButton6);
+            DestroyImmediate(BuyButtonExtra6);
+            text2.Crystal -= 40;
+            PlayerPrefs.SetInt("Crystal", text2.Crystal);
+            BuyHouse6 = 2;
+            PlayerPrefs.GetInt("BuyHouse6", BuyHouse6);
+            HouseButton6.SetActive(true);
+            playerstat.curEXP += 10;
+            Houses += 1;
+
+        }
+    }
+    public void BuyHouseEmerald7()
+    {
+        if (text2.Crystal >= 100)
+        {
+            DestroyImmediate(BuyButton7);
+            DestroyImmediate(BuyButtonExtra7);
+            text2.Crystal -= 40;
+            PlayerPrefs.SetInt("Crystal", text2.Crystal);
+            BuyHouse7 = 2;
+            PlayerPrefs.GetInt("BuyHouse7", BuyHouse7);
+            HouseButton7.SetActive(true);
+            playerstat.curEXP += 10;
+            Houses += 1;
 
         }
     }

@@ -7,7 +7,7 @@ public class info : MonoBehaviour
     public GameObject Info1;
     void Start()
     {
-        Info1.SetActive(false);
+        
     }
 
     // Update is called once per frame

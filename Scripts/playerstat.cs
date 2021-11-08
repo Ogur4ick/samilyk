@@ -26,11 +26,7 @@ using UnityEngine.UI;
                 curEXP = 0;
             }
         }
-        //public playerstat(int lvl, int EXP)
-        //{
-         //   this.lvl = lvl;
-           // this.EXP = EXP;
-       // }
+        
         
     }
 

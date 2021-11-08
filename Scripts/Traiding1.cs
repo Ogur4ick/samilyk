@@ -40,6 +40,7 @@ public class Traiding1 : MonoBehaviour
         {
             text2.Crystal -= 5;
             text2.Coins += 100;
+            text2.infocoins += 100;
         }
     }
     public void Trade5()
@@ -48,6 +49,25 @@ public class Traiding1 : MonoBehaviour
         {
             text2.Crystal -= 1;
             text2.Coins += 20;
+            text2.infocoins += 20;
+        }
+    }
+    public void Trade6()
+    {
+        if (text2.Coins >= 100)
+        {
+            text2.Crystal += 1;
+            text2.infocrystal += 1;
+            text2.Coins -= 100;
+        }
+    }
+    public void Trade7()
+    {
+        if (text2.Coins >= 1000)
+        {
+            text2.Crystal += 10;
+            text2.infocrystal += 10;
+            text2.Coins -= 1000;
         }
     }
 }
